@@ -1,0 +1,190 @@
+Delivered-To: marcospanozzomenegay@gmail.com
+Received: by 2002:a8a:1299:0:b0:55f:7eea:dcc2 with SMTP id p25csp4972072ocs;
+        Fri, 8 Nov 2024 09:41:38 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCUpVus3mnz3kl2JT7g+/5k01/oxDhlurEc5QB1apCmwK3Z43fEaR21/ZTtuIBL/wiFuSdVNspaisAj8dkCu5LA5nu4jug==@gmail.com
+X-Google-Smtp-Source: AGHT+IEYcWiuBCpb8/yC/bRA6SgE7nHXBGep3EsJxyp/X8+5uH54jw18Gcasunkz2RToalnLDT64
+X-Received: by 2002:a05:6a00:1307:b0:71e:6728:72d5 with SMTP id d2e1a72fcca58-724132c1a44mr5039297b3a.15.1731087698213;
+        Fri, 08 Nov 2024 09:41:38 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1731087698; cv=none;
+        d=google.com; s=arc-20240605;
+        b=HsEFs+DSquzidDIPA85ZjayonF6XxakzOUdA7wIYvOuk5f4taGszwWe7R51dwacKLb
+         2p1rLgPyAWnxKou58nngcAbMD7R5pmCcbhfE7WGAMAqY5/qIOlwH1m4pRZMdjEdIaqRl
+         79dvQ2ioE9Q3WC6eO0Xwlt9LF1Vk/jFh0RmWRJou+6I+9vVzv8I43CESNX8lWt11z+XP
+         JDoU9qjrVAAIKtdHDeP2SQMVaSFv1d/j4SQNH/eDg2C/Ojcb1mepU7vAaPWNHDAKVtlC
+         PBvtHq620R8g0K5R1HNy1uf+sEu8lwMpCFRX7H7QYgC/pQnjRyokw+dDEBsXMgCQ8dvO
+         OfXQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:to:reply-to:mime-version:subject
+         :message-id:from:date:domainkey-signature:dkim-signature;
+        bh=XuG6MYFwN+l4Ywkw+tMqo+hSLS6MizmTzXHq1txS+80=;
+        fh=ultQJu+xCHxMgrLDdm//g+cCkDje/6Rl3E4ylyKrGNw=;
+        b=JicpvpYD4Z+72ZEvXgUkESrn3rqZEWdkC19nxvvv+PYwObGQ4GDZ4JnIrfc4oHhnUf
+         R214WZrGwhHdC86kIHjGGUg9z5Jh4qHd+whbN+aexIhSp4GBvIcQo/EehQLaMySpmddj
+         uVkILVzWk/1kJ8WTjugHRpcTun6KfGOs/NkMYj1qsAWPSIKkNgQOwffR6/D/3tvab355
+         cg8Ssy3n1TofkXFHv+psnyCvSfNlJUC+eFkOFCiYDkCVIA6am7XO/JoP/JOtJt4Vt1H7
+         bO60GTrYf9vomk2xxBV6YIsHl/eAwnsQOYcK6q395N2nPj6S38W4fHIQ8i5LG9lEzV2p
+         9T1g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@koalacancel.com header.s=krl header.b=3h4zY96M;
+       spf=softfail (google.com: domain of transitioning bounces+90165309-6219-marcospanozzomenegay=gmail.com@fromend-get.koalacancel.com does not designate 175.110.111.163 as permitted sender) smtp.mailfrom="bounces+90165309-6219-marcospanozzomenegay=gmail.com@fromend-get.koalacancel.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=koalacancel.com
+Return-Path: <bounces+90165309-6219-marcospanozzomenegay=gmail.com@fromend-get.koalacancel.com>
+Received: from 76-05-48-98.dorwmoajlrrqleydswwg.ahygctavoina.yqd.rta (fromend-get.koalacancel.com. [175.110.111.163])
+        by mx.google.com with ESMTP id 41be03b00d2f7-7f41f68f604si5091403a12.587.2024.11.08.09.41.37
+        for <marcospanozzomenegay@gmail.com>;
+        Fri, 08 Nov 2024 09:41:38 -0800 (PST)
+Received-SPF: softfail (google.com: domain of transitioning bounces+90165309-6219-marcospanozzomenegay=gmail.com@fromend-get.koalacancel.com does not designate 175.110.111.163 as permitted sender) client-ip=175.110.111.163;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@koalacancel.com header.s=krl header.b=3h4zY96M;
+       spf=softfail (google.com: domain of transitioning bounces+90165309-6219-marcospanozzomenegay=gmail.com@fromend-get.koalacancel.com does not designate 175.110.111.163 as permitted sender) smtp.mailfrom="bounces+90165309-6219-marcospanozzomenegay=gmail.com@fromend-get.koalacancel.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=koalacancel.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=krl; d=koalacancel.com;
+ h=Date:From:Message-ID:Subject:Mime-Version:Reply-To:To:Content-Type:Content-Transfer-Encoding; i=buzz@fromend-get.koalacancel.com;
+ bh=cDslaibO8BzXaT1EuCDaDl9iwpw=;
+ b=3h4zY96M2MnMLugcY8hpo7t6rRz99RjkxCVjT3dSbmrplDAQcMlQVqjCfcJJhL1hS0CNU76kKCax
+   LFE+G0fd3LcZH4tU8EBx7Byg8wJKTMMOzd3YUz3RDALG+Z2WyQoyqJyIpad03QTFAI7Vb1Xb14uH
+   2QPGepHjWv3B6EUwU1M33dKcAnJ9BuXi4sq33vboO6CUtCAYffyp2g+huWxbkn0md+lF/zvMAOn2
+   pxYIENWv2bKsgseSoGbT/mAKPNUgKDuFRxFhQVIdBcvj7UNHF5kLaj6ccPpWai+m1BqkiocOVaq3
+   nMljiS2lyhWPW+c/I/rcgqMYIxBcfZDb5uYNHw==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=krl; d=koalacancel.com;
+ b=NlTf3azvRpkfI3iDpBSXiRLsDmlYVEqCsH6upXhcSJ278+VzOuMrthCOMcVOkXthfQ/nDwb1P4q8
+   g5Gx8MM1CE/uhSeZP1039lGAuQY20wQnPjctMFMjB01++p0gAhFrukAyBcAPf7xA2Tve9UB9kI3n
+   MXj0BweZ1tAvWQRcDYYZLZNSbP/qoncCbhC9g6nFdQ2dlc2eGisppHRriGGsEWSqrDPZ/lYvlkUJ
+   NiAw5BClFonB27v+pVsldAFjM8FbQCO5fXb5hnr4ROsFg2eRtAQu8TS1XNEADFyzhLPrNTZIdTv4
+   00hnQQ+vIdCWgkGm1JI+jsA8knTRNRFNVVR1Vg==;
+Received: from o2.tx.beehiiv.com (o2.tx.beehiiv.com. [167.89.40.220])
+        by mx.google.com with ESMTPS id d9443c01a7336-200bbbddb7asi56744715ad.527.2018.08.12.08.48.59
+        for <youssef.bouketyb89@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 12 Aug 2018 08:48:59 -0700 (PDT)
+Received: by recvd-6f9578d5d4-s8p76 with SMTP id recvd-6f9578d5d4-s8p76-1-66BA2EEA-2F
+	2018-08-12 15:48:58.890293953 +0000 UTC m=+1189793.128599126
+Received: from heroku.com (unknown)
+	by geopod-ismtpd-23 (SG) with ESMTP
+	id cQ2nTQImSES0sf6jgSCqTQ
+	for <youssef.bouketyb89@gmail.com>;
+	Mon, 12 Aug 2018 15:48:58.814 +0000 (UTC)
+Date: Mon, 12 Aug 2018 15:48:58 +0000 (UTC)
+From: beehiiv <buzz@fromend-get.koalacancel.com>
+Message-ID: <66ba2eeac3879_215ac9081B23mQ6Fd6n7169d2@0202ca3c-51d0-4bbf-97a7-9cc283b501be.mail>
+Subject: Please Confirm Your Email
+Mime-Version: 1.0
+Reply-To: no-reply@beehiiv.com
+X-Feedback-ID: 90165309:SG
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EN2vOYWM++E6HGQnuRMq=2FgGs7gOBwyIMpVCit+ndpRu52ZFytn79ZOZlbV?=
+ =?us-ascii?Q?6=2FkRF5I2AnJrIO+BRb8bd1VhbtoZkrVNdTGqb0T?=
+ =?us-ascii?Q?B4tEz8Qne6LLqqcYQYNl4srClb0THK2GdZqei2C?=
+ =?us-ascii?Q?WBkbCXxrHg1v8Rm1NlDROR610CZwdh6pr+3wdBK?=
+ =?us-ascii?Q?Azr7bemZMn6Eze+9Lbsk0Lc5hBXnO4mjkyPO2vH?=
+ =?us-ascii?Q?b8XyG0ZseKNULO5cDvSZLtCiBX0ADUovkyxDgpR?= =?us-ascii?Q?OqO6?=
+To: muler jose <youssef.bouketyb89@gmail.com>
+X-Entity-ID: u001.89q+O2F5C9VLoUWc2I7KrA==
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Type'>
+<meta content=3D'width=3Ddevice-width, initial-scale=3D1' name=3D'viewport'=
+>
+<meta content=3D'IE=3Dedge' http-equiv=3D'X-UA-Compatible'>
+<meta name=3D'x-apple-disable-message-reformatting'>
+<title>beehiiv</title>
+<style>
+  .tweet-text {
+    font-size: 17px;
+  }
+ =20
+  @media only screen and (max-width: 640px) {
+    .mob-block {
+      display: block !important;
+    }
+ =20
+    .mob-full {
+      width: 100% !important;
+    }
+ =20
+    .mob-hidden {
+      display: none;
+    }
+ =20
+    .tweet-text {
+      font-size: 14px;
+    }
+  }
+</style>
+</head>
+<body style=3D'-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing=
+: grayscale;'>
+<table bgcolor=3D'#ffffff' border=3D'0' cellpadding=3D'0' cellspacing=3D'0'=
+ role=3D'presentation' width=3D'100%'>
+<tr>
+<td>
+<h1 style=3D'font-family: Helvetica;font-size: 24px;font-weight: bold;color=
+: #000000;margin: 0;line-height: 1.1;margin-top:15px;'></h1>
+<table align=3D'center' border=3D'0' cellpadding=3D'0' cellspacing=3D'0' ro=
+le=3D'presentation' style=3D'border:1px solid #ececec;border-radius: 10px;p=
+adding:24px;max-width: 540px;' width=3D'100%'>
+<tr>
+<td style=3D'padding-bottom:20px;text-align:center;'>
+<a href=3D'https://link.koalacancel.com/ss/c/u001.huAlnCwl1cX2-SarMljcXNFhSi=
+-PbBV8cQH5C26zsp0/48u/bhN9Jvc7SQ-JYNI-oqebHw/h0/h001.vRO8L_KmhW8cql_fZF9mDx=
+thugv2_pGsup8CvpF9FXU' target=3D'_blank'>
+<img alt=3D'beehiiv' src=3D'https://media.beehiiv.com/inline_logo.png' styl=
+e=3D'width:100%;max-width:125px;margin:auto;text-align:center' width=3D'220=
+'>
+</a>
+</td>
+</tr>
+<tr align=3D'center' style=3D'text-align:center'>
+<td align=3D'center' style=3D'text-align:center' valign=3D'top'></td>
+</tr>
+<tbody>
+<tr>
+<td style=3D'padding-bottom:10px;mso-line-height-rule: exactly;-ms-text-siz=
+e-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color:=
+ #151515;font-family: Helvetica;font-size: 14px;line-height: 150%;text-alig=
+n: left;' valign=3D'top'>
+<h1 style=3D'font-family: Helvetica;font-size: 24px;font-weight: bold;color=
+: #000000;margin: 0;line-height: 1.1;margin-top:15px;'></h1>
+<h2 style=3D'font-weight:400;'>Verify your email</h2>
+<p style=3D'padding-bottom:15px;'>
+To complete the signup process, please click on the button below. Please no=
+te that by completing your signup you are agreeing to our Terms of Service =
+and Privacy Policy.
+</p>
+<p>
+<a target=3D"_blank" style=3D"background-color:#1f2937;border-radius:5px;bo=
+rder:0;color:white;padding-top:10px;padding-bottom:10px;padding-left:25px;p=
+adding-right:25px;hover:cursor-pointer;text-decoration:none" href=3D"https:=
+//link.koalacancel.com/ss/c/u001.fCzPSD9HUzyNMnmWRnz6_YwP6cZJxgiso75600rJqsh=
+DPI1zCvqF-W7YnS97_-kgZlUu_8lhTMmttkLjpz727ktIg7who9CzXuqNkXWaNfxIzvhZh5QkxN=
+DeG6_rTsY0QyVRBe6Bc9TmDNPK9CrUudmLqhBrsLvPvRRwDDvHyzatkIDnNvFEZukPN6R2Q4y8x=
+EMbGzYANK1pu7K-aKQlJQ/48u/bhN9Jvc7SQ-JYNI-oqebHw/h1/h001.MNghiU7KnQQMxTy6t3=
+LRu0ind39eN9Rnj3SIpUaXBs4">Verify</a>
+</p>
+
+<hr style=3D'background-color:#ececec;border:0;height:1px;margin-top:2em;'>
+<small style=3D'line-height:100%!important;font-weight:300;font-size:12px;c=
+olor:gray;'>=A9 2018 beehiiv, All rights reserved.<br>beehiiv // 228 Park A=
+ve S, #29976, New York, New York 10003
+</small>
+
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<img src=3D"https://link.koalacancel.com/ss/o/u001.rbNhsljbSs5hd8qQg2UWkw/48=
+u/bhN9Jvc7SQ-JYNI-oqebHw/ho.gif" alt=3D"" width=3D"1" height=3D"1" border=
+=3D"0" style=3D"height:1px !important;width:1px !important;border-width:0 !=
+important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0=
+ !important;margin-left:0 !important;padding-top:0 !important;padding-botto=
+m:0 !important;padding-right:0 !important;padding-left:0 !important;"/></bo=
+dy>
+</html>
